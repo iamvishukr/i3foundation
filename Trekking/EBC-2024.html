@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Index - Multi Bootstrap Template</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="../assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <style>
+            .hero {
+              background: url("../assets/img/everest-page-main.jpg") no-repeat center center/cover;
+              height: 100vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #646464;
+              text-align: center;
+            }
+
+            .hero-content h1 {
+              font-size: 3rem;
+              margin-bottom: 20px;
+            }
+
+            .hero-content p {
+              font-size: 1.2rem;
+              margin-bottom: 30px;
+            }
+
+            .cta-button {
+              background-color: #ff6f61;
+              color: #fff;
+              padding: 10px 20px;
+              text-decoration: none;
+              border-radius: 5px;
+            }
+
+            .about-trek,
+            .gallery,
+            .contact {
+              padding: 50px 20px;
+              text-align: center;
+            }
+
+            .gallery-images {
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+            }
+
+            .gallery-images img {
+              width: 30%;
+              margin-bottom: 20px;
+              border-radius: 10px;
+            }
+
+            .contact form {
+              max-width: 600px;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+            }
+
+            .contact form input,
+            .contact form textarea {
+              margin-bottom: 20px;
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+            }
+
+            .contact form button {
+              background-color: #ff6f61;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+
+            /* Itinerary Section */
+            .itinerary {
+              padding: 50px 20px;
+              text-align: center;
+              background-color: #f8f8f8;
+            }
+
+            .itinerary h2 {
+              font-size: 2.5rem;
+              margin-bottom: 40px;
+            }
+
+            .itinerary-cards {
+              display: flex;
+              flex-direction: column;
+              gap: 30px;
+            }
+
+            .card {
+              background-color: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+            }
+
+            .card-images {
+              display: flex;
+              justify-content: space-between;
+              gap: 10px;
+              padding: 10px;
+            }
+
+            .card-images img {
+              width: 23%;
+              height: 150px;
+              object-fit: cover;
+              border-radius: 5px;
+            }
+
+            .card-content {
+              padding: 20px;
+              text-align: left;
+            }
+
+            .card-content h3 {
+              font-size: 1.5rem;
+              margin-bottom: 10px;
+            }
+
+            .card-content p {
+              font-size: 1rem;
+              color: #555;
+            }
+
+            /* Trip Facts Section */
+            .trip-facts {
+              padding: 50px 20px;
+              text-align: center;
+              background-color: #fff;
+            }
+
+            .trip-facts h2 {
+              font-size: 2.5rem;
+              margin-bottom: 40px;
+            }
+
+            .facts-container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 20px;
+              max-width: 1200px;
+              margin: 0 auto;
+            }
+
+            .fact-card {
+              background-color: #f8f8f8;
+              border-radius: 10px;
+              padding: 20px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              text-align: center;
+            }
+
+            .fact-card h3 {
+              font-size: 1.5rem;
+              margin-bottom: 10px;
+              color: #333;
+            }
+
+            .fact-card p {
+              font-size: 1rem;
+              color: #555;
+            }
+
+            .fact-card i {
+              font-size: 2rem;
+              color: #ff6f61;
+              margin-bottom: 10px;
+            }
+
+            /* FAQ Section */
+            .faq {
+              padding: 50px 20px;
+              text-align: center;
+              background-color: #f8f8f8;
+            }
+
+            .faq h2 {
+              font-size: 2.5rem;
+              margin-bottom: 40px;
+            }
+
+            .faq-container {
+              max-width: 800px;
+              margin: 0 auto;
+            }
+
+            .faq-item {
+              border-bottom: 1px solid #ddd;
+              margin-bottom: 10px;
+            }
+
+            .faq-question {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 15px;
+              cursor: pointer;
+            }
+
+            .faq-question h3 {
+              font-size: 1.2rem;
+              margin: 0;
+              color: #333;
+            }
+
+            .faq-question i {
+              font-size: 1.2rem;
+              color: #333;
+              transition: transform 0.3s ease;
+            }
+
+            .faq-answer {
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.3s ease, padding 0.3s ease;
+            }
+
+            .faq-answer p {
+              padding: 0 15px 15px;
+              margin: 0;
+              color: #555;
+            }
+
+            /* Active State */
+            .faq-item.active .faq-question i {
+              transform: rotate(180deg);
+            }
+
+            .faq-item.active .faq-answer {
+              max-height: 200px; /* Adjust based on content */
+              padding-top: 10px;
+            }
+
+
+            .testimonials .testimonial-wrap {
+        padding-left: 50px;
+      }
+
+      .testimonials .testimonials-carousel,
+      .testimonials .testimonials-slider {
+        overflow: hidden;
+      }
+
+      .testimonials .testimonial-item {
+        background-color: var(--surface-color);
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        box-sizing: content-box;
+        padding: 30px 30px 30px 60px;
+        margin: 30px 15px;
+        min-height: 200px;
+        position: relative;
+      }
+
+      .testimonials .testimonial-item .testimonial-img {
+        width: 90px;
+        border-radius: 10px;
+        border: 6px solid var(--background-color);
+        position: absolute;
+        left: -45px;
+      }
+
+      .testimonials .testimonial-item h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0 5px 0;
+      }
+
+      .testimonials .testimonial-item h4 {
+        color: color-mix(in srgb, var(--default-color), transparent 50%);
+        font-size: 14px;
+        margin: 0;
+      }
+
+      .testimonials .testimonial-item .stars {
+        margin: 10px 0;
+      }
+
+      .testimonials .testimonial-item .stars i {
+        color: #ffc107;
+        margin: 0 1px;
+      }
+
+      .testimonials .testimonial-item .quote-icon-left,
+      .testimonials .testimonial-item .quote-icon-right {
+        color: color-mix(in srgb, var(--accent-color), transparent 60%);
+        font-size: 26px;
+        line-height: 0;
+      }
+
+      .testimonials .testimonial-item .quote-icon-left {
+        display: inline-block;
+        left: -5px;
+        position: relative;
+      }
+
+      .testimonials .testimonial-item .quote-icon-right {
+        display: inline-block;
+        right: -5px;
+        position: relative;
+        top: 10px;
+        transform: scale(-1, -1);
+      }
+
+      .testimonials .testimonial-item p {
+        font-style: italic;
+        margin: 15px auto 15px auto;
+      }
+
+      .testimonials .swiper-wrapper {
+        height: auto;
+      }
+
+      .testimonials .swiper-pagination {
+        margin-top: 20px;
+        position: relative;
+      }
+
+      .testimonials .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: var(--background-color);
+        opacity: 1;
+        border: 1px solid var(--accent-color);
+      }
+
+      .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: var(--accent-color);
+      }
+
+      @media (max-width: 767px) {
+        .testimonials .testimonial-wrap {
+          padding-left: 0;
+        }
+
+        .testimonials .testimonials-carousel,
+        .testimonials .testimonials-slider {
+          overflow: hidden;
+        }
+
+        .testimonials .testimonial-item {
+          padding: 30px;
+          margin: 15px;
+        }
+
+        .testimonials .testimonial-item .testimonial-img {
+          position: static;
+          left: auto;
+        }
+            /* .container {
+              width: 80%;
+              margin: 0 auto;
+              padding: 20px;
+            }
+
+            .intro {
+              text-align: center;
+              margin-bottom: 40px;
+            }
+
+            .intro h1 {
+              font-size: 2.5em;
+              color: #333;
+            }
+
+            .intro p {
+              font-size: 1.2em;
+              color: #666;
+            }
+
+            .popular-tours,
+            .top-routes,
+            .online-booking,
+            .fabulous-location {
+              margin-bottom: 40px;
+            }
+
+            .popular-tours h2,
+            .top-routes h2,
+            .online-booking h2,
+            .fabulous-location h2 {
+              font-size: 2em;
+              color: #333;
+              margin-bottom: 20px;
+            }
+
+            .tour-list,
+            .route-list {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .tour-item,
+            .route-item {
+              background-color: #fff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              width: 48%;
+            }
+
+            .tour-item h3,
+            .route-item p {
+              font-size: 1.2em;
+              color: #333;
+            }
+
+            .online-booking button {
+              background-color: #007bff;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 1em;
+            }
+
+            .online-booking button:hover {
+              background-color: #0056b3;
+            }
+
+            .fabulous-location p {
+              font-size: 1.2em;
+              color: #666;
+            } */
+    </style>
+  </head>
+  <body>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Multi</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Activities</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li>
+                  <a href="https://cyclothon.i3foundation.org/" target="_blank"
+                    >Cyclothon</a
+                  >
+                </li>
+                <li><a href="arts-culture.html">Arts & Culture</a></li>
+                <li class="dropdown">
+                  <a href="arts-culture.html"
+                    ><span>Trekking</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+                  <ul>
+                    <li><a href="./Trekking/ABC-2023.html">ABC 2023</a></li>
+                    <li><a href="#">EBC 2024</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>Everest Summit</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+                  <ul>
+                    <li><a href="#">Everest Summit 2.0</a></li>
+                    <li><a href="#">Event Schedule</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                ><span>Programs</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li>
+                  <a href="https://tedxkanke.com/" target="_blank"
+                    ><span>TEDxKanke</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="#about">Donate</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Trekking to ABC</h1>
+        <p>Join us on an unforgettable journey to the Annapurna Base Camp.</p>
+        <a href="#" class="cta-button">Join the Trek</a>
+      </div>
+    </section>
+
+    <section class="about-trek">
+      <h2>About the Trek</h2>
+      <p>
+        The Annapurna Base Camp trek is one of the most popular treks in Nepal.
+        It offers stunning views of the Himalayas, diverse landscapes, and a
+        chance to experience the local culture.
+      </p>
+    </section>
+
+    <section class="trip-facts">
+      <h2>Trip Facts</h2>
+      <div class="facts-container">
+        <div class="fact-card">
+          <i class="fas fa-temperature-low"></i>
+          <h3>Weather</h3>
+          <p>-10°C to 18°C</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-calendar-week"></i>
+          <h3>Duration</h3>
+          <p>7 Days</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-person-hiking"></i>
+          <h3>Difficulty</h3>
+          <p>Moderate</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-bed"></i>
+          <h3>Accommodation</h3>
+          <p>Lodges</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Meals Included</h3>
+          <p>Breakfast, Lunch, Dinner</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-snowflake"></i>
+          <h3>Best Season</h3>
+          <p>Sept, Oct, Nov, March, April, May</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-taxi"></i>
+          <h3>Transportation</h3>
+          <p>Jeep</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Daily Activity</h3>
+          <p>Approx. 5 - 6 hours</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-user-large"></i>
+          <h3>Religion</h3>
+          <p>Buddhism</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-user-group"></i>
+          <h3>Ethnic People</h3>
+          <p>Gurung, Magar</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-mountain-sun"></i>
+          <h3>Geographic Terrain</h3>
+          <p>Mountain, Village, Hot Spring, Terrace</p>
+        </div>
+        <div class="fact-card">
+          <i class="fa-solid fa-mountain-city"></i>
+          <h3>Region of Nepal</h3>
+          <p>Annapurna Region, Kaski</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="itinerary">
+      <h2>7 Days Annapurna Base Camp Trekking Day-to-Day Itinerary</h2>
+      <div class="itinerary-cards">
+        <!-- Day 1 -->
+        <div class="card">
+          <div class="card-images">
+            <img src="day1-1.jpg" alt="Day 1 Image 1" />
+            <img src="day1-2.jpg" alt="Day 1 Image 2" />
+            <img src="day1-3.jpg" alt="Day 1 Image 3" />
+            <img src="day1-4.jpg" alt="Day 1 Image 4" />
+          </div>
+          <div class="card-content">
+            <h3>Day 1: Arrival in Kathmandu</h3>
+            <p>
+              Arrive in Kathmandu, transfer to the hotel, and prepare for the
+              trek. Explore the vibrant streets of Thamel and enjoy a welcome
+              dinner.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="card">
+          <div class="card-images">
+            <img src="day2-1.jpg" alt="Day 2 Image 1" />
+            <img src="day2-2.jpg" alt="Day 2 Image 2" />
+            <img src="day2-3.jpg" alt="Day 2 Image 3" />
+            <img src="day2-4.jpg" alt="Day 2 Image 4" />
+          </div>
+          <div class="card-content">
+            <h3>Day 2: Fly to Pokhara and Trek to Tikhedhunga</h3>
+            <p>
+              Take a scenic flight to Pokhara, drive to Nayapul, and start the
+              trek to Tikhedhunga. Enjoy the lush green landscapes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="card">
+          <div class="card-images">
+            <img src="day3-1.jpg" alt="Day 3 Image 1" />
+            <img src="day3-2.jpg" alt="Day 3 Image 2" />
+            <img src="day3-3.jpg" alt="Day 3 Image 3" />
+            <img src="day3-4.jpg" alt="Day 3 Image 4" />
+          </div>
+          <div class="card-content">
+            <h3>Day 3: Trek to Ghorepani</h3>
+            <p>
+              Trek through rhododendron forests and reach Ghorepani. Enjoy
+              stunning views of the Annapurna and Dhaulagiri ranges.
+            </p>
+          </div>
+        </div>
+        <!-- Day 4 -->
+
+        <div class="card">
+          <div class="card-images">
+            <img src="day3-1.jpg" alt="Day 3 Image 1" />
+            <img src="day3-2.jpg" alt="Day 3 Image 2" />
+            <img src="day3-3.jpg" alt="Day 3 Image 3" />
+            <img src="day3-4.jpg" alt="Day 3 Image 4" />
+          </div>
+          <div class="card-content">
+            <h3>Day 3: Trek to Ghorepani</h3>
+            <p>
+              Trek through rhododendron forests and reach Ghorepani. Enjoy
+              stunning views of the Annapurna and Dhaulagiri ranges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+
+        <div class="card">
+          <div class="card-images">
+            <img src="day3-1.jpg" alt="Day 3 Image 1" />
+            <img src="day3-2.jpg" alt="Day 3 Image 2" />
+            <img src="day3-3.jpg" alt="Day 3 Image 3" />
+            <img src="day3-4.jpg" alt="Day 3 Image 4" />
+          </div>
+          <div class="card-content">
+            <h3>Day 3: Trek to Ghorepani</h3>
+            <p>
+              Trek through rhododendron forests and reach Ghorepani. Enjoy
+              stunning views of the Annapurna and Dhaulagiri ranges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 6 -->
+
+        <div class="card">
+          <div class="card-images">
+            <img src="day3-1.jpg" alt="Day 3 Image 1" />
+            <img src="day3-2.jpg" alt="Day 3 Image 2" />
+            <img src="day3-3.jpg" alt="Day 3 Image 3" />
+            <img src="day3-4.jpg" alt="Day 3 Image 4" />
+          </div>
+          <div class="card-content">
+            <h3>Day 3: Trek to Ghorepani</h3>
+            <p>
+              Trek through rhododendron forests and reach Ghorepani. Enjoy
+              stunning views of the Annapurna and Dhaulagiri ranges.
+            </p>
+          </div>
+        </div>
+
+        <!-- Day 7 -->
+
+        <div class="card">
+          <div class="card-images">
+            <img src="day3-1.jpg" alt="Day 3 Image 1" />
+            <img src="day3-2.jpg" alt="Day 3 Image 2" />
+            <img src="day3-3.jpg" alt="Day 3 Image 3" />
+            <img src="day3-4.jpg" alt="Day 3 Image 4" />
+          </div>
+          <div class="card-content">
+            <h3>Day 3: Trek to Ghorepani</h3>
+            <p>
+              Trek through rhododendron forests and reach Ghorepani. Enjoy
+              stunning views of the Annapurna and Dhaulagiri ranges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <div>
+          <span>Check Our</span>
+          <span class="description-title">Testimonials</span>
+        </div>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-1.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Proin iaculis purus consequat sem cure digni ssim donec
+                      porttitora entum suscipit rhoncus. Accusantium quam,
+                      ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                      risus at semper.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-2.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Export tempor illum tamen malis malis eram quae irure
+                      esse labore quem cillum quid cillum eram malis quorum
+                      velit fore eram velit sunt aliqua noster fugiat irure amet
+                      legam anim culpa.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-3.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Enim nisi quem export duis labore cillum quae magna enim
+                      sint quorum nulla quem veniam duis minim tempor labore
+                      quem eram duis noster aute amet eram fore quis sint
+                      minim.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-4.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Fugiat enim eram quae cillum dolore dolor amet nulla
+                      culpa multos export minim fugiat minim velit minim dolor
+                      enim duis veniam ipsum anim magna sunt elit fore quem
+                      dolore labore illum veniam.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img
+                    src="assets/img/testimonials/testimonials-5.jpg"
+                    class="testimonial-img"
+                    alt=""
+                  />
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Quis quorum aliqua sint quem legam fore sunt eram irure
+                      aliqua veniam tempor noster veniam enim culpa labore duis
+                      sunt culpa nulla illum cillum fugiat legam esse veniam
+                      culpa fore nisi cillum quid.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-images">
+        <img src="image1.jpg" alt="Trekking Image 1" />
+        <img src="image2.jpg" alt="Trekking Image 2" />
+        <img src="image3.jpg" alt="Trekking Image 3" />
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What is the best time to trek to Annapurna Base Camp?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              The best time to trek to Annapurna Base Camp is during the
+              pre-monsoon (March to May) and post-monsoon (September to
+              November) seasons. These months offer clear skies and stable
+              weather.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What is the difficulty level of the trek?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              The Annapurna Base Camp trek is considered moderate in difficulty.
+              It involves walking for 5-6 hours daily on varied terrain,
+              including steep ascents and descents.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What kind of accommodation is available during the trek?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Accommodation during the trek is primarily in teahouses or lodges.
+              These provide basic facilities such as a bed, blanket, and shared
+              bathrooms.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>Are meals included in the trek?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, meals are included. You will be provided with breakfast,
+              lunch, and dinner during the trek. The meals are typically Nepali
+              or continental.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3>What should I pack for the trek?</h3>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              You should pack warm clothing, sturdy trekking boots, a sleeping
+              bag, a first aid kit, sunscreen, and other personal essentials. A
+              detailed packing list will be provided upon booking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Multi</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="About.html">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              products and services!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span> <strong class="px-1 sitename">Multi</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <!-- <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div> -->
+
+    <script>
+      // FAQ Toggle Functionality
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const faqItem = question.parentElement;
+          faqItem.classList.toggle("active");
+        });
+      });
+    </script>
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

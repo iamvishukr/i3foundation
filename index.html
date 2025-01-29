@@ -8,14 +8,14 @@
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="/assets/img/favicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
@@ -47,6 +47,100 @@
   ======================================================== -->
 
     <style>
+      /* TEDx Section */
+      .tedx-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .tedx-content {
+        display: flex;
+        width: 100%;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+      }
+
+      /* Video Container - Full Height */
+      .tedx-video {
+        flex: 1;
+        /* height: 100%; */
+        display: flex;
+        align-items: center;
+      }
+
+      .tedx-video iframe {
+        width: 100%;
+        /* height: 100%; */
+        border-radius: 8px;
+      }
+
+      /* Text Content */
+      .tedx-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .tedx-text h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .highlight {
+        color: red;
+      }
+
+      /* Feature Box */
+      .tedx-feature {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+
+      .tedx-icon {
+        padding: 8px;
+        width: 50px;
+        height: 50px;
+        background-color: #e9ecef;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .tedx-icon i {
+        font-size: 24px;
+        color: #6c757d;
+      }
+      .flagship-title {
+        text-align: center;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .tedx-content {
+          flex-direction: column;
+        }
+
+        .tedx-video {
+          height: 250px;
+        }
+
+        .tedx-video iframe {
+          height: 100%;
+        }
+        .tedx-sec-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
       .domain-section {
         background-color: #f8f9fa;
         padding: 20px;
@@ -64,40 +158,126 @@
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
-        margin: 20px;
         justify-content: center;
       }
       .card {
+        margin-top: 40px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         overflow: hidden;
-        width: 250px;
+        width: 300px;
         transition: transform 0.3s ease-in-out;
       }
       .card:hover {
         transform: translateY(-5px);
       }
       .card .icon {
-        background-color: #f8f9fa;
         padding: 24px;
         font-size: 2rem;
         text-align: center;
       }
       .card .text {
         padding: 16px;
+        text-align: center;
+        color: #7d7c7c;
       }
-      .card .mission{
+      .card .mission {
         color: #2282ff;
       }
-      .card .vision{
+      .card .vision {
         color: #22bdff;
       }
-      .card .objective{
-        color: #22ff4e;
+      .card .objective {
+        color: #065a17;
       }
-      .card .goal{
+      .card .knowledge {
+        color: rgb(197, 197, 11);
+      }
+      .card .goal {
         color: #2282ff;
       }
+      .about-para {
+        margin-top: 60px;
+      }
+      .programs-container {
+        text-align: center;
+        padding: 10px;
+        background-color: #f8f9fa;
+      }
+
+      .programs-title {
+        font-size: 35px;
+        margin-bottom: 20px;
+        font-family: "Raleway", sans-serif;
+      }
+
+      .programs {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .program-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 35px;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .program-card img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .program-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .program-description {
+        font-size: 14px;
+        color: #555;
+      }
+      .tedx-sec-container {
+        display: flex;
+        padding: 56px;
+        gap: 16px;
+      }
+      .tedx-sec-container h4 {
+        text-align: center;
+        margin-top: 4px;
+        font: bold;
+      }
+      .swiper-container {
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+      width: 200px; /* Adjust width as needed */
+      height: 100px; /* Adjust height as needed */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     </style>
   </head>
 
@@ -126,14 +306,14 @@
                     >Cyclothon</a
                   >
                 </li>
-                <li><a href="#">Arts & Culture</a></li>
+                <li><a href="arts-culture.html">Arts & Culture</a></li>
                 <li class="dropdown">
-                  <a href="#"
+                  <a href="arts-culture.html"
                     ><span>Trekking</span>
                     <i class="bi bi-chevron-down toggle-dropdown"></i
                   ></a>
                   <ul>
-                    <li><a href="#">ABC 2023</a></li>
+                    <li><a href="./Trekking/ABC-2023.html">ABC 2023</a></li>
                     <li><a href="#">EBC 2024</a></li>
                   </ul>
                 </li>
@@ -143,7 +323,7 @@
                     <i class="bi bi-chevron-down toggle-dropdown"></i
                   ></a>
                   <ul>
-                    <li><a href="#">Everest Summit 2.0</a></li>
+                    <li><a href="Everest-Summit/everest-summit-2.0.html">Everest Summit 2.0</a></li>
                     <li><a href="#">Event Schedule</a></li>
                   </ul>
                 </li>
@@ -281,7 +461,11 @@
         <h2 class="text-center mb-4">Domain of Operations</h2>
         <div class="row">
           <div class="col-md-4 domain-item">
-            <img src="./assets/img/domain-STEM.webp" alt="STEM" class="img-fluid" />
+            <img
+              src="./assets/img/domain-STEM.webp"
+              alt="STEM"
+              class="img-fluid"
+            />
             <h5 class="mt-3">S.T.E.M</h5>
             <p>
               At i3 Foundation, we ignite young minds with the power of STEM
@@ -329,8 +513,49 @@
         <!-- End Section Title -->
 
         <div class="container">
-          <div class="row gy-4">
-            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <div class="about-container">
+            <div class="card">
+              <div class="icon mission"><i class="bi bi-gift"></i></div>
+              <div class="text">
+                To empower and inspire 1.0M youths through comprehensive
+                programs in STEM, Adventure Sports, and Fine Arts & Culture,
+                fostering holistic development and societal contribution by
+                2030.
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon vision"><i class="bi bi-eye"></i></div>
+              <div class="text">
+                A world where every individual is equipped with the skills,
+                confidence, and creativity to lead and innovate across diverse
+                fields.
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon objective"><i class="bi bi-book"></i></div>
+              <div class="text">
+                To implement innovative educational initiatives, adventurous
+                activities, and cultural programs that enhance personal growth,
+                encourage teamwork, and celebrate diversity.
+              </div>
+            </div>
+            <div class="card">
+              <div class="icon goal">
+                <i class="bi bi-arrow-up-circle-fill"></i>
+              </div>
+              <div class="text">
+                To provide transformative experiences and opportunities that
+                nurture talent, build character, and promote cultural
+                appreciation among youth.
+              </div>
+            </div>
+          </div>
+          <div class="row gy-4 about-para">
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <p>
                 Our vision is a world where every individual is equipped with
                 the skills, confidence, and creativity to lead and innovate
@@ -379,79 +604,110 @@
             </div>
           </div>
         </div>
+      </section>
+      <!-- /About Section -->
 
-        <div class="about-container">
-          <div class="card">
-            <div class="icon mission"><i class="bi bi-gift"></i></div>
-            <div class="text">
-              To empower and inspire 1.0M youths through comprehensive programs
-              in STEM, Adventure Sports, and Fine Arts & Culture, fostering
-              holistic development and societal contribution by 2030.
+      <section>
+        <div class="programs-container">
+          <h2 class="programs-title">Our Programs</h2>
+          <div class="programs">
+            <div class="program-card">
+              <img
+                src="./assets/img/everest-summit.webp"
+                alt="Everest Summit"
+              />
+              <div class="program-title">Everest Summit</div>
+              <div class="program-description">
+                Embark on the ultimate adventure with our Everest Summit
+                expedition...
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="icon vision"><i class="bi bi-eye"></i></div>
-            <div class="text">
-              A world where every individual is equipped with the skills,
-              confidence, and creativity to lead and innovate across diverse
-              fields.
+            <div class="program-card">
+              <img
+                src="./assets/img/Leadership-concleave.webp"
+                alt="Leadership Conclave"
+              />
+              <div class="program-title">Leadership Conclave</div>
+              <div class="program-description">
+                Join us at the Leadership Conclave, where leaders from various
+                industries...
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="icon objective"><i class="bi bi-book"></i></div>
-            <div class="text">
-              To implement innovative educational initiatives, adventurous
-              activities, and cultural programs that enhance personal growth,
-              encourage teamwork, and celebrate diversity.
-            </div>
-          </div>
-          <div class="card">
-            <div class="icon goal"><i class="bi bi-arrow-up-circle-fill"></i></div>
-            <div class="text">
-              To provide transformative experiences and opportunities that
-              nurture talent, build character, and promote cultural appreciation
-              among youth.
+            <div class="program-card">
+              <img src="./assets/img/change-maker.webp" alt="Change Maker" />
+              <div class="program-title">Change Maker</div>
+              <div class="program-description">
+                Be a part of the change at Change Makers, where we celebrate
+                those...
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- /About Section -->
 
       <!-- Stats Section -->
       <section id="stats" class="stats section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
-            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
               <i class="bi bi-emoji-smile"></i>
               <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1" class="purecounter"></span>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="16"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
                 <p>Programs</p>
               </div>
             </div>
             <!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
               <i class="bi bi-journal-richtext"></i>
               <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="10646" data-purecounter-duration="1" class="purecounter"></span>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="10646"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
                 <p>People Impacted</p>
               </div>
             </div>
             <!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
               <i class="bi bi-headset"></i>
               <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="2"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
                 <p>Activities</p>
               </div>
             </div>
             <!-- End Stats Item -->
 
-            <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <div
+              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
+            >
               <i class="bi bi-people"></i>
               <div class="stats-item">
-                <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1" class="purecounter"></span>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="8"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
                 <p>Members</p>
               </div>
             </div>
@@ -461,6 +717,114 @@
       </section>
       <!-- /Stats Section -->
 
+      <div class="flagship-title">
+        <h2>Our Flagship Program | <span class="highlight">TEDxKanke</span></h2>
+      </div>
+      <div class="container tedx-section">
+        <div class="tedx-content">
+          <!-- Video Section -->
+          <div class="tedx-video">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/dQX0bNlHZgRQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <!-- Text Section -->
+          <div class="tedx-text">
+            <div class="tedx-feature">
+              <div class="tedx-icon"><i class="bi bi-lightbulb"></i></div>
+              <div>
+                <h4>INSPIRING TALKS</h4>
+                <p>
+                  TEDxKanke brings together thinkers and doers from various
+                  fields to share their innovative ideas and inspiring stories,
+                  aiming to spark deep discussions and connections within the
+                  community.
+                </p>
+              </div>
+            </div>
+
+            <div class="tedx-feature">
+              <div class="tedx-icon"><i class="bi bi-link-45deg"></i></div>
+              <div>
+                <h4>GLOBAL IMPACT</h4>
+                <p>
+                  As part of the global TEDx community, TEDxKanke contributes to
+                  spreading transformative ideas and fostering a culture of
+                  curiosity, creativity, and collaboration, impacting lives far
+                  beyond the local region.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="tedx-sec-container">
+          <div class="card">
+            <div class="icon mission"><i class="bi bi-speedometer2"></i></div>
+            <h4>Peak Performance</h4>
+            <div class="text">
+              Achieving the summit of Everest represents the pinnacle of human
+              endurance, pushing boundaries and showcasing unparalleled
+              resilience.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon vision"><i class="bi bi-eye"></i></div>
+            <h4>Team Collaboration</h4>
+            <div class="text">
+              Conquering Everest is a testament to the power of teamwork, where
+              every member's role is crucial to the success of the expedition.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon knowledge"><i class="bi bi-lightbulb"></i></div>
+            <h4>Endless Knowledge</h4>
+            <div class="text">
+              The journey to Everest's summit is a rich educational experience,
+              offering insights into geology, meteorology, and high-altitude
+              physiology.
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon goal">
+              <i class="bi bi-arrow-up-circle-fill"></i>
+            </div>
+            <h4>Personal Growth</h4>
+            <div class="text">
+              Scaling Everest is more than a physical challenge; it's a journey
+              of self-discovery, fostering immense personal and spiritual
+              growth.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------sponsor-->
+      <div class="swiper-container mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./assets/img/sponsor-1.webp" alt="Sponsor 1"></div>
+          <div class="swiper-slide"><img src="./assets/img/sponsor-2.webp" alt="Sponsor 2"></div>
+          <div class="swiper-slide"><img src="./assets/img/sponsor-3.webp" alt="Sponsor 3"></div>
+          <div class="swiper-slide"><img src="./assets/img/sponsor-4.webp" alt="Sponsor 4"></div>
+          <div class="swiper-slide"><img src="./assets/img/sponsor-5.webp" alt="Sponsor 5"></div>
+          <div class="swiper-slide"><img src="./assets/img/sponsor-6.webp" alt="Sponsor 6"></div>
+          <div class="swiper-slide"><img src="./assets/img/sponsor-7.webp" alt="Sponsor 7"></div>
+          <div class="swiper-slide"><img src="./assets/img/sponsor-8.webp" alt="Sponsor 8"></div>
+          <!-- Add more slider items as needed -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+      <!------sponsor--->
       <!-- Services Section -->
       <section id="services" class="services section">
         <!-- Section Title -->
@@ -475,7 +839,11 @@
 
         <div class="container">
           <div class="row gy-4">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div class="service-item position-relative">
                 <div class="icon">
                   <i class="bi bi-activity"></i>
@@ -485,13 +853,18 @@
                 </a>
                 <p>
                   Provident nihil minus qui consequatur non omnis maiores. Eos
-                  accusantium minus dolores iure perferendis tempore et consequatur.
+                  accusantium minus dolores iure perferendis tempore et
+                  consequatur.
                 </p>
               </div>
             </div>
             <!-- End Service Item -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div class="service-item position-relative">
                 <div class="icon">
                   <i class="bi bi-broadcast"></i>
@@ -507,7 +880,11 @@
             </div>
             <!-- End Service Item -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div class="service-item position-relative">
                 <div class="icon">
                   <i class="bi bi-easel"></i>
@@ -523,7 +900,11 @@
             </div>
             <!-- End Service Item -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div class="service-item position-relative">
                 <div class="icon">
                   <i class="bi bi-bounding-box-circles"></i>
@@ -540,7 +921,11 @@
             </div>
             <!-- End Service Item -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <div class="service-item position-relative">
                 <div class="icon">
                   <i class="bi bi-calendar4-week"></i>
@@ -557,7 +942,11 @@
             </div>
             <!-- End Service Item -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               <div class="service-item position-relative">
                 <div class="icon">
                   <i class="bi bi-chat-square-text"></i>
@@ -648,7 +1037,6 @@
                   </div>
                 </div>
               </div>
-              <!-- End testimonial item -->
 
               <div class="swiper-slide">
                 <div class="testimonial-wrap">
@@ -680,7 +1068,6 @@
                   </div>
                 </div>
               </div>
-              <!-- End testimonial item -->
 
               <div class="swiper-slide">
                 <div class="testimonial-wrap">
@@ -693,11 +1080,11 @@
                     <h3>Jena Karlis</h3>
                     <h4>Store Owner</h4>
                     <div class="stars">
-                      <i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i
-                      ><i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
                     </div>
                     <p>
                       <i class="bi bi-quote quote-icon-left"></i>
@@ -712,7 +1099,6 @@
                   </div>
                 </div>
               </div>
-              <!-- End testimonial item -->
 
               <div class="swiper-slide">
                 <div class="testimonial-wrap">
@@ -738,12 +1124,12 @@
                         culpa multos export minim fugiat minim velit minim dolor
                         enim duis veniam ipsum anim magna sunt elit fore quem
                         dolore labore illum veniam.</span
+                      >
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
                 </div>
               </div>
-              <!-- End testimonial item -->
 
               <div class="swiper-slide">
                 <div class="testimonial-wrap">
@@ -769,21 +1155,19 @@
                         aliqua veniam tempor noster veniam enim culpa labore
                         duis sunt culpa nulla illum cillum fugiat legam esse
                         veniam culpa fore nisi cillum quid.</span
+                      >
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
                 </div>
               </div>
-              <!-- End testimonial item -->
             </div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
-      <!-- /Testimonials Section -->
 
-      <!-- Call To Action Section -->
-      <section
+      <!-- <section
         id="call-to-action"
         class="call-to-action section dark-background"
       >
@@ -809,366 +1193,29 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- /Call To Action Section -->
+      </section> -->
 
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <div>
-            <span>Check Our</span>
-            <span class="description-title">Portfolio</span>
-          </div>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-product">Product</li>
-              <li data-filter=".filter-branding">Branding</li>
-              <li data-filter=".filter-books">Books</li>
-            </ul>
-            <!-- End Portfolio Filters -->
-
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/app-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/app-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >App 1</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/product-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Product 1</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/branding-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Branding 1</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/books-1.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-1.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Books 1</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/app-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/app-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >App 2</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/product-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Product 2</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/branding-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Branding 2</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/books-2.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-2.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Books 2</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/app-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/app-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >App 3</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/product-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/product-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Product 3</a
-                      >
-                    </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/branding-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/branding-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Branding 3</a>
-                      </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <div class="portfolio-content h-100">
-                  <a
-                    href="assets/img/portfolio/books-3.jpg"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox"
-                    ><img
-                      src="assets/img/portfolio/books-3.jpg"
-                      class="img-fluid"
-                      alt=""
-                  /></a>
-                  <div class="portfolio-info">
-                    <h4>
-                      <a href="portfolio-details.html" title="More Details"
-                        >Books 3</a>
-                      </h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-            </div>
-            <!-- End Portfolio Container -->
-          </div>
-        </div>
-      </section>
-      <!-- /Portfolio Section -->
-
-      <!-- Team Section -->
-      <section id="team" class="team section">
-        <!-- Section Title -->
+      <!-- <section id="team" class="team section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Team</h2>
           <div>
             <span>Check Our</span> <span class="description-title">Team</span>
           </div>
         </div>
-        <!-- End Section Title -->
 
         <div class="container">
           <div class="row gy-4">
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div class="member">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" />
+                <img
+                  src="assets/img/team/team-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
                 <div class="member-info">
                   <div class="member-info-content">
                     <h4>Walter White</h4>
@@ -1183,9 +1230,12 @@
                 </div>
               </div>
             </div>
-            <!-- End Team Member -->
 
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div class="member">
                 <img src="assets/img/team-2.jpg" class="img-fluid" alt="" />
                 <div class="member-info">
@@ -1202,9 +1252,12 @@
                 </div>
               </div>
             </div>
-            <!-- End Team Member -->
 
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div class="member">
                 <img src="assets/img/team-3.jpg" class="img-fluid" alt="" />
                 <div class="member-info">
@@ -1221,9 +1274,12 @@
                 </div>
               </div>
             </div>
-            <!-- End Team Member -->
 
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="col-xl-3 col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div class="member">
                 <img src="assets/img/team-4.jpg" class="img-fluid" alt="" />
                 <div class="member-info">
@@ -1240,11 +1296,9 @@
                 </div>
               </div>
             </div>
-            <!-- End Team Member -->
           </div>
         </div>
-      </section>
-      <!-- /Team Section -->
+      </section> -->
     </main>
 
     <footer id="footer" class="footer dark-background">
