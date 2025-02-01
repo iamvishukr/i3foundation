@@ -37,14 +37,12 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-
-    <!-- =======================================================
-  * Template Name: Multi
-  * Template URL: https://bootstrapmade.com/multi-responsive-bootstrap-template/ 
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/ 
-  ======================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
     <style>
       /* TEDx Section */
@@ -95,7 +93,9 @@
       .highlight {
         color: red;
       }
-
+      .red{
+        color: red;
+      }
       /* Feature Box */
       .tedx-feature {
         display: flex;
@@ -253,31 +253,31 @@
         font: bold;
       }
       .swiper-container {
-      width: 100%;
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 10px;
-      width: 200px; /* Adjust width as needed */
-      height: 100px; /* Adjust height as needed */
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        width: 200px; /* Adjust width as needed */
+        height: 100px; /* Adjust height as needed */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     </style>
   </head>
 
@@ -289,7 +289,7 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">Multi</h1>
+          <h1 class="sitename">i3Foundation</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -314,17 +314,25 @@
                   ></a>
                   <ul>
                     <li><a href="./Trekking/ABC-2023.html">ABC 2023</a></li>
-                    <li><a href="#">EBC 2024</a></li>
+                    <li><a href="./Trekking/EBC-2024.html">EBC 2024</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
-                  <a href="#"
+                  <a href="./Everest-Summit/everest-summit.html"
                     ><span>Everest Summit</span>
                     <i class="bi bi-chevron-down toggle-dropdown"></i
                   ></a>
                   <ul>
-                    <li><a href="Everest-Summit/everest-summit-2.0.html">Everest Summit 2.0</a></li>
-                    <li><a href="#">Event Schedule</a></li>
+                    <li>
+                      <a href="./Everest-Summit/everest-summit-2.0.html"
+                        >Everest Summit 2.0</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./Everest-Summit/event-schedule.html"
+                        >Event Schedule</a
+                      >
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -360,7 +368,7 @@
           data-bs-ride="carousel"
           data-bs-interval="5000"
         >
-          <div class="carousel-item active">
+          <div class="carousel-item active rellax" data-rellax-speed="-2">
             <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="" />
             <div class="carousel-container">
               <h2>Cyclothon<br /></h2>
@@ -379,7 +387,7 @@
           </div>
           <!-- End Carousel Item -->
 
-          <div class="carousel-item">
+          <div class="carousel-item rellax" data-rellax-speed="-2">
             <img src="assets/img/hero-carousel/hero-carousel-2.png" alt="" />
             <div class="carousel-container">
               <h2>Empowering Future Leaders Through STEM</h2>
@@ -396,7 +404,7 @@
           </div>
           <!-- End Carousel Item -->
 
-          <div class="carousel-item">
+          <div class="carousel-item rellax" data-rellax-speed="-2">
             <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="" />
             <div class="carousel-container">
               <h2>Conquer Challenges, Embrace Adventure</h2>
@@ -458,7 +466,9 @@
       <!-- /Hero Section -->
 
       <div class="container domain-section">
-        <h2 class="text-center mb-4">Domain of Operations</h2>
+        <h2 class="text-center mb-4 animate__animated animate__fadeInUp">
+          Domain of <span class="red">Operations</span> 
+        </h2>
         <div class="row">
           <div class="col-md-4 domain-item">
             <img
@@ -503,7 +513,10 @@
       <!-- About Section -->
       <section id="about" class="about section">
         <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
+        <div
+          class="container section-title animate__animated animate__fadeInUp"
+          data-aos="fade-up"
+        >
           <h2>About</h2>
           <div>
             <span>Learn More</span>
@@ -608,8 +621,8 @@
       <!-- /About Section -->
 
       <section>
-        <div class="programs-container">
-          <h2 class="programs-title">Our Programs</h2>
+        <div class="programs-container animate__animated animate__fadeInUp">
+          <h2 class="programs-title">Our <span class="red">Programs</span></h2>
           <div class="programs">
             <div class="program-card">
               <img
@@ -717,7 +730,7 @@
       </section>
       <!-- /Stats Section -->
 
-      <div class="flagship-title">
+      <div class="flagship-title animate__animated animate__fadeInUp">
         <h2>Our Flagship Program | <span class="highlight">TEDxKanke</span></h2>
       </div>
       <div class="container tedx-section">
@@ -809,162 +822,40 @@
       </div>
 
       <!-------sponsor-->
-      <div class="swiper-container mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./assets/img/sponsor-1.webp" alt="Sponsor 1"></div>
-          <div class="swiper-slide"><img src="./assets/img/sponsor-2.webp" alt="Sponsor 2"></div>
-          <div class="swiper-slide"><img src="./assets/img/sponsor-3.webp" alt="Sponsor 3"></div>
-          <div class="swiper-slide"><img src="./assets/img/sponsor-4.webp" alt="Sponsor 4"></div>
-          <div class="swiper-slide"><img src="./assets/img/sponsor-5.webp" alt="Sponsor 5"></div>
-          <div class="swiper-slide"><img src="./assets/img/sponsor-6.webp" alt="Sponsor 6"></div>
-          <div class="swiper-slide"><img src="./assets/img/sponsor-7.webp" alt="Sponsor 7"></div>
-          <div class="swiper-slide"><img src="./assets/img/sponsor-8.webp" alt="Sponsor 8"></div>
-          <!-- Add more slider items as needed -->
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-      <!------sponsor--->
-      <!-- Services Section -->
-      <section id="services" class="services section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <div>
-            <span>Check Our</span>
-            <span class="description-title">Services</span>
-          </div>
-        </div>
-        <!-- End Section Title -->
-
+      <section class="sponsor-section">
         <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-activity"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Nesciunt Mete</h3>
-                </a>
-                <p>
-                  Provident nihil minus qui consequatur non omnis maiores. Eos
-                  accusantium minus dolores iure perferendis tempore et
-                  consequatur.
-                </p>
-              </div>
+          <h2 class="sponsor-title">Our <span class="red">Sponsors</span></h2>
+          <div class="sponsor-cards">
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-1.webp" alt="Sponsor 1" />
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-broadcast"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Eosle Commodi</h3>
-                </a>
-                <p>
-                  Ut autem aut autem non a. Sint sint sit facilis nam iusto
-                  sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
-                </p>
-              </div>
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-2.webp" alt="Sponsor 2" />
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-easel"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Ledo Markt</h3>
-                </a>
-                <p>
-                  Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
-                  Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
-                </p>
-              </div>
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-3.webp" alt="Sponsor 3" />
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Asperiores Commodit</h3>
-                </a>
-                <p>
-                  Non et temporibus minus omnis sed dolor esse consequatur.
-                  Cupiditate sed error ea fuga sit provident adipisci neque.
-                </p>
-                <a href="service-details.html" class="stretched-link"></a>
-              </div>
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-4.webp" alt="Sponsor 4" />
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-calendar4-week"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Velit Doloremque</h3>
-                </a>
-                <p>
-                  Cumque et suscipit saepe. Est maiores autem enim facilis ut
-                  aut ipsam corporis aut. Sed animi at autem alias eius labore.
-                </p>
-                <a href="service-details.html" class="stretched-link"></a>
-              </div>
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-5.webp" alt="Sponsor 5" />
             </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-chat-square-text"></i>
-                </div>
-                <a href="service-details.html" class="stretched-link">
-                  <h3>Dolori Architecto</h3>
-                </a>
-                <p>
-                  Hic molestias ea quibusdam eos. Fugiat enim doloremque aut
-                  neque non et debitis iure. Corrupti recusandae ducimus enim.
-                </p>
-                <a href="service-details.html" class="stretched-link"></a>
-              </div>
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-6.webp" alt="Sponsor 6" />
             </div>
-            <!-- End Service Item -->
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-7.webp" alt="Sponsor 7" />
+            </div>
+            <div class="sponsor-card">
+              <img src="./assets/img/sponsor-8.webp" alt="Sponsor 8" />
+            </div>
           </div>
         </div>
       </section>
+      <!------sponsor--->
+      <!-- Services Section -->
+
       <!-- /Services Section -->
 
       <!-- Testimonials Section -->
@@ -1404,6 +1295,159 @@
       <div></div>
     </div>
 
+    <script>
+      gsap.from(".card", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: ".card",
+          start: "top 80%",
+        },
+      });
+
+      var rellax = new Rellax(".rellax");
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+      // Hero Section Animation
+      anime({
+        targets: '.carousel-container h2',
+        translateY: [-50, 0],
+        opacity: [0, 1],
+        duration: 1500,
+        easing: 'easeOutExpo',
+        delay: 500,
+      });
+    
+      anime({
+        targets: '.carousel-container p',
+        translateY: [50, 0],
+        opacity: [0, 1],
+        duration: 1500,
+        easing: 'easeOutExpo',
+        delay: 1000,
+      });
+    
+      anime({
+        targets: '.btn-get-started',
+        scale: [0.8, 1],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: 1500,
+      });
+    
+      // Domain Section Animation
+      anime({
+        targets: '.domain-item',
+        translateY: [50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: anime.stagger(200),
+      });
+    
+      // About Section Animation
+      anime({
+        targets: '.card',
+        scale: [0.8, 1],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: anime.stagger(200),
+      });
+    
+      // Programs Section Animation
+      anime({
+        targets: '.program-card',
+        translateX: [-100, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: anime.stagger(200),
+      });
+    
+      // Stats Section Animation
+      anime({
+        targets: '.purecounter',
+        innerHTML: [0, (el) => el.getAttribute('data-purecounter-end')],
+        round: 1,
+        duration: 2000,
+        easing: 'easeOutExpo',
+        delay: anime.stagger(200),
+      });
+    
+      // TEDx Section Animation
+      anime({
+        targets: '.tedx-video',
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: 500,
+      });
+    
+      anime({
+        targets: '.tedx-text',
+        translateX: [50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: 1000,
+      });
+    
+      // Sponsor Section Animation
+      anime({
+        targets: '.sponsor-card',
+        scale: [0.8, 1],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: anime.stagger(200),
+      });
+    
+      // Footer Animation
+      anime({
+        targets: '.footer-about, .footer-links, .footer-newsletter',
+        translateY: [50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        easing: 'easeOutExpo',
+        delay: anime.stagger(200),
+      });
+    </script>
+    <script>
+      const swiper1 = new Swiper(".cardSwiper1", {
+        loop: true, // Enable looping
+        autoplay: {
+          delay: 3000, // 3 seconds delay between slides
+          disableOnInteraction: false, // Continue autoplay after interaction
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true, // Allows users to click on pagination bullets
+        },
+        slidesPerView: 1, // Show one slide at a time
+        spaceBetween: 10, // Space between slides
+      });
+
+      const swiper2 = new Swiper(".cardSwiper2", {
+        loop: true, // Enable looping
+        autoplay: {
+          delay: 3000, // 3 seconds delay between slides
+          disableOnInteraction: false, // Continue autoplay after interaction
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true, // Allows users to click on pagination bullets
+        },
+        slidesPerView: 1, // Show one slide at a time
+        spaceBetween: 10, // Space between slides
+      });
+    </script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -1413,7 +1457,7 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>

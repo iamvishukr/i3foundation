@@ -14,7 +14,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,75 +27,131 @@
     <link href="assets/css/main.css" rel="stylesheet">
 
     <style>
-        .about-section {
-            background-color: #f8f9fa;
-            padding: 80px 0;
+        /* Global Styles */
+        .red{
+            color: red;
         }
-        .about-section .section-title {
-            text-align: center;
-            margin-bottom: 50px;
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
         }
-        .about-section .section-title h2 {
-            font-size: 36px;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
             font-weight: 700;
             color: #333;
         }
-        .about-section .section-title p {
-            font-size: 18px;
+
+        p {
+            font-size: 16px;
             color: #666;
+            line-height: 1.8;
         }
-        .about-section .about-content {
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #000000;
+
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: #000000;
+        }
+
+        .image-text-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
         }
-        .about-section .about-content .about-image {
+
+        .image-text-section .image {
             flex: 1;
-            margin-right: 30px;
+            max-width: 50%;
         }
-        .about-section .about-content .about-image img {
+
+        .image-text-section .image img {
             width: 100%;
             height: auto;
             border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-        .about-section .about-content .about-text {
+
+        .image-text-section .text {
             flex: 1;
+            max-width: 50%;
         }
-        .about-section .about-content .about-text h3 {
-            font-size: 24px;
-            font-weight: 700;
-            color: #333;
+
+        .image-text-section .text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
         }
-        .about-section .about-content .about-text p {
-            font-size: 16px;
-            color: #666;
-            line-height: 1.6;
+
+        .image-text-section .text p {
+            margin-bottom: 20px;
         }
-        .about-section .about-content .about-text ul {
-            list-style: none;
-            padding: 0;
-        }
-        .about-section .about-content .about-text ul li {
-            margin-bottom: 10px;
-        }
-        .about-section .about-content .about-text ul li i {
-            color: #007bff;
-            margin-right: 10px;
-        }
-        .about-section .about-content .about-text ul li span {
-            font-size: 16px;
-            color: #666;
-        }
-        .about-section .about-content .about-text a {
+
+        .image-text-section .text a {
             display: inline-block;
             margin-top: 20px;
             font-size: 16px;
             color: #007bff;
             text-decoration: none;
         }
-        .about-section .about-content .about-text a:hover {
+
+        .image-text-section .text a:hover {
             text-decoration: underline;
+        }
+
+        .founder-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .founder-section .founder-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .founder-section .founder-content .founder-image {
+            flex: 1;
+            max-width: 40%;
+        }
+
+        .founder-section .founder-content .founder-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder-section .founder-content .founder-text {
+            flex: 1;
+            max-width: 55%;
+        }
+
+        .founder-section .founder-content .founder-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .founder-section .founder-content .founder-text p {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -116,15 +172,15 @@
                         </a>
                         <ul>
                             <li><a href="https://cyclothon.i3foundation.org/" target="_blank">Cyclothon</a></li>
-                            <li><a href="#">Arts & Culture</a></li>
+                            <li><a href="./arts-culture.html">Arts & Culture</a></li>
                             <li class="dropdown">
                                 <a href="#">
                                     <span>Trekking</span>
                                     <i class="bi bi-chevron-down toggle-dropdown"></i>
                                 </a>
                                 <ul>
-                                    <li><a href="#">ABC 2023</a></li>
-                                    <li><a href="#">EBC 2024</a></li>
+                                    <li><a href="./Trekking/ABC-2023.html">ABC 2023</a></li>
+                                    <li><a href="./Trekking/EBC-2024.html">EBC 2024</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -133,8 +189,9 @@
                                     <i class="bi bi-chevron-down toggle-dropdown"></i>
                                 </a>
                                 <ul>
-                                    <li><a href="#">Everest Summit 2.0</a></li>
-                                    <li><a href="#">Event Schedule</a></li>
+                                    <li><a href="./Everest-Summit/everest-summit.html">Everest Summit</a></li>
+                                    <li><a href="./Everest-Summit/everest-summit-2.0.html">Everest Summit 2.0</a></li>
+                                    <li><a href="./Everest-Summit/event-schedule.html">Event Schedule</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -158,40 +215,88 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="section">
         <div class="container section-title" data-aos="fade-up">
-            <h2>About Us</h2>
+            <h2>About <span class="red">Us</span></h2>
             <p>Discover our vision, mission, and the impact we aim to make.</p>
         </div>
 
         <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="./assets/img/About-i3.webp" class="img-fluid" alt="i3 Foundation">
+            <!-- Vision Section -->
+            <div class="image-text-section">
+                <div class="image">
+                    <img src="./assets/img/team-image.webp" alt="i3 Foundation Team">
                 </div>
-                <div class="about-text">
-                    <h3>Our Vision</h3>
+                <div class="text">
+                    <h3>Our <span class="red">Vision</span></h3>
                     <p>
-                        Our vision is a world where every individual is equipped with the skills, confidence, and creativity to lead and innovate across diverse fields.
+                        A world where every individual is equipped with the skills, confidence, and creativity to lead and innovate across diverse fields.
                     </p>
-                    <h3>Our Mission</h3>
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="image-text-section">
+                <div class="text">
+                    <h3>Our <span class="red">Mission</span></h3>
                     <p>
                         To empower and inspire 1.0 million youths through comprehensive programs in STEM, Adventure Sports, and Fine Arts & Culture, fostering holistic development and societal contribution by 2030.
                     </p>
-                    <h3>Our Objective</h3>
+                </div>
+                <div class="image">
+                    <img src="./assets/img/mission-image.webp" alt="i3 Foundation Mission">
+                </div>
+            </div>
+
+            <!-- Objective Section -->
+            <div class="image-text-section">
+                <div class="image">
+                    <img src="./assets/img/objective-image.webp" alt="i3 Foundation Objective">
+                </div>
+                <div class="text">
+                    <h3>Our <span class="red">Objective</span></h3>
                     <p>
                         To implement innovative educational initiatives, adventurous activities, and cultural programs that enhance personal growth, encourage teamwork, and celebrate diversity.
                     </p>
-                    <h3>Our Goal</h3>
+                </div>
+            </div>
+
+            <!-- Goal Section -->
+            <div class="image-text-section">
+                <div class="text">
+                    <h3>Our <span class="red">Goal</span></h3>
                     <p>
                         To provide transformative experiences and opportunities that nurture talent, build character, and promote cultural appreciation among youth.
                     </p>
-                    <a href="#" class="read-more">Learn More <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="image">
+                    <img src="./assets/img/goal-image.webp" alt="i3 Foundation Goal">
                 </div>
             </div>
         </div>
     </section>
     <!-- End About Section -->
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="founder-content">
+                <div class="founder-image">
+                    <img src="./assets/img/about.webp" alt="Founder - Mr. Rajeev Gupta">
+                </div>
+                <div class="founder-text">
+                    <h3>Founder</h3>
+                    <p>
+                        Mr. Rajeev Gupta, the Founder and Director of i3 Foundation, brings a wealth of experience and leadership across various domains. With over 29 years in the Commercial Taxes Department, he served as an officer handling VAT transactions and IT operations. His tenure included pioneering roles such as the first Treasury Officer, overseeing government budgets, TDS, and salary functions. After a distinguished career, he transitioned to corporate relations at JSW Steel Ltd. as DGM and later contributed significantly as Principal Consultant at PWC India.
+                    </p>
+                    <p>
+                        Mr. Rajeev Gupta is also recognized for his impactful initiatives, including curating and licensing TEDx Kanke Ranchi, co-founding Ranchi Mall, and establishing the Jharkhand Open Coffee Club (JOCC). His expertise was pivotal in the transition to GST in Jharkhand, where he served as team lead. His career reflects a commitment to innovation, community engagement, and transformative leadership, essential foundations he brings to the i3 Foundation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Founder Section -->
 
     <footer>
         <div class="container copyright text-center mt-4">

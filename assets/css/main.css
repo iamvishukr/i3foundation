@@ -807,13 +807,99 @@ section,
   padding: 0;
 }
 
-.hero .carousel {
+/* Sponsor Section */
+.sponsor-section {
+  padding: 80px 0; /* Increased padding for better spacing */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.sponsor-title {
+  text-align: center; /* Center the title */
+  font-size: 36px; /* Title font size */
+  margin-bottom: 40px; /* Increased space below the title */
+  color: #333; /* Darker color for contrast */
+  font-family: var(--heading-font); /* Use the heading font */
+}
+
+.sponsor-cards {
+  display: flex; /* Flex display for cards */
+  justify-content: center; /* Center the cards */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px; /* Limit the width for better alignment */
+  margin: 0 auto; /* Center the container */
+}
+
+.sponsor-card {
+  background-color: #ffffff; /* White background for cards */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  width: 200px; /* Fixed width for consistency */
+  height: 150px; /* Fixed height for consistency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.sponsor-card img {
+  max-width: 100%; /* Ensure the image fits within the card */
+  max-height: 100%; /* Ensure the image fits within the card */
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.sponsor-card:hover img {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sponsor-cards {
+    gap: 15px; /* Reduce gap for smaller screens */
+  }
+
+  .sponsor-card {
+    width: 150px; /* Smaller cards for mobile */
+    height: 100px; /* Smaller cards for mobile */
+  }
+
+  .sponsor-title {
+    font-size: 28px; /* Smaller title for mobile */
+  }
+}
+/* .hero .carousel {
   width: 100%;
   min-height: 60vh;
   padding: 0;
   margin: 0;
   background-color: var(--background-color);
   position: relative;
+} */
+
+.hero .carousel {
+  width: 100%;
+  min-height: 75vh; /* Increased height */
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.hero .carousel-container {
+  position: absolute;
+  inset: 120px 64px 64px 64px; /* Adjusted positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
 }
 
 .hero img {
@@ -850,7 +936,7 @@ section,
   inset: 0;
 }
 
-.hero .carousel-container {
+/* .hero .carousel-container {
   position: absolute;
   inset: 90px 64px 64px 64px;
   display: flex;
@@ -858,7 +944,7 @@ section,
   align-items: center;
   flex-direction: column;
   z-index: 3;
-}
+} */
 
 .hero h2 {
   margin-bottom: 30px;

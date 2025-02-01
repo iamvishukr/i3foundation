@@ -8,15 +8,61 @@
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link href="../assets/img/favicon.png" rel="icon" />
     <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <!-- Parallax and GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
     />
     <link
       rel="stylesheet"
@@ -45,431 +91,605 @@
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet" />
     <style>
-            .hero {
-              background: url("../assets/img/everest-page-main.jpg") no-repeat center center/cover;
-              height: 100vh;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              color: #646464;
-              text-align: center;
-            }
+                                .timeline {
+                              position: relative;
+                              max-width: 800px;
+                              margin: 0 auto;
+                          }
 
-            .hero-content h1 {
-              font-size: 3rem;
-              margin-bottom: 20px;
-            }
+                          .timeline::after {
+                              content: '';
+                              position: absolute;
+                              width: 6px;
+                              background-color: orange;
+                              top: 0;
+                              bottom: 0;
+                              left: 50%;
+                              margin-left: -3px;
+                          }
 
-            .hero-content p {
-              font-size: 1.2rem;
-              margin-bottom: 30px;
-            }
+                          .timeline-item {
+                              padding: 10px 40px;
+                              position: relative;
+                              background-color: inherit;
+                              width: 50%;
+                          }
 
-            .cta-button {
-              background-color: #ff6f61;
-              color: #fff;
-              padding: 10px 20px;
-              text-decoration: none;
-              border-radius: 5px;
-            }
+                          .timeline-item::after {
+                              content: '';
+                              position: absolute;
+                              width: 25px;
+                              height: 25px;
+                              right: -17px;
+                              background-color: orange;
+                              border: 4px solid orange;
+                              top: 15px;
+                              border-radius: 50%;
+                              z-index: 1;
+                          }
 
-            .about-trek,
-            .gallery,
-            .contact {
-              padding: 50px 20px;
-              text-align: center;
-            }
+                          .left {
+                              left: 0;
+                          }
 
-            .gallery-images {
-              display: flex;
-              justify-content: space-around;
-              flex-wrap: wrap;
-            }
+                          .right {
+                              left: 50%;
+                          }
 
-            .gallery-images img {
-              width: 30%;
-              margin-bottom: 20px;
-              border-radius: 10px;
-            }
+                          .left::before {
+                              content: " ";
+                              height: 0;
+                              position: absolute;
+                              top: 22px;
+                              width: 0;
+                              z-index: 1;
+                              right: 30px;
+                              border: medium solid var(--primary-color);
+                              border-width: 10px 0 10px 10px;
+                              border-color: transparent transparent transparent var(--primary-color);
+                          }
 
-            .contact form {
-              max-width: 600px;
-              margin: 0 auto;
-              display: flex;
-              flex-direction: column;
-            }
+                          .right::before {
+                              content: " ";
+                              height: 0;
+                              position: absolute;
+                              top: 22px;
+                              width: 0;
+                              z-index: 1;
+                              left: 30px;
+                              border: medium solid var(--primary-color);
+                              border-width: 10px 10px 10px 0;
+                              border-color: transparent var(--primary-color) transparent transparent;
+                          }
 
-            .contact form input,
-            .contact form textarea {
-              margin-bottom: 20px;
-              padding: 10px;
-              border: 1px solid #ccc;
-              border-radius: 5px;
-            }
+                          .right::after {
+                              left: -16px;
+                          }
 
-            .contact form button {
-              background-color: #ff6f61;
-              color: #fff;
-              padding: 10px 20px;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-            }
+                          .timeline-content {
+                              padding: 20px 30px;
+                              background-color: #fff;
+                              position: relative;
+                              border-radius: 6px;
+                          }
+                          @media screen and (max-width: 600px) {
+                              .timeline::after {
+                                  left: 31px;
+                              }
 
-            /* Itinerary Section */
-            .itinerary {
-              padding: 50px 20px;
-              text-align: center;
-              background-color: #f8f8f8;
-            }
+                              .timeline-item {
+                                  width: 100%;
+                                  padding-left: 70px;
+                                  padding-right: 25px;
+                              }
 
-            .itinerary h2 {
-              font-size: 2.5rem;
-              margin-bottom: 40px;
-            }
+                              .timeline-item::before {
+                                  left: 60px;
+                                  border: medium solid var(--primary-color);
+                                  border-width: 10px 10px 10px 0;
+                                  border-color: transparent var(--primary-color) transparent transparent;
+                              }
 
-            .itinerary-cards {
-              display: flex;
-              flex-direction: column;
-              gap: 30px;
-            }
+                              .left::after, .right::after {
+                                  left: 15px;
+                              }
 
-            .card {
-              background-color: #fff;
-              border-radius: 10px;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-              overflow: hidden;
-            }
+                              .right {
+                                  left: 0%;
+                              }
+                          }
+                              .hero {
+                                background: url("../assets/img/everest-page-main.jpg") no-repeat center center/cover;
+                                height: 100vh;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: #646464;
+                                text-align: center;
+                              }
 
-            .card-images {
-              display: flex;
-              justify-content: space-between;
-              gap: 10px;
-              padding: 10px;
-            }
+                              .hero-content h1 {
+                                font-size: 3rem;
+                                margin-bottom: 20px;
+                              }
 
-            .card-images img {
-              width: 23%;
-              height: 150px;
-              object-fit: cover;
-              border-radius: 5px;
-            }
+                              .hero-content p {
+                                font-size: 1.2rem;
+                                margin-bottom: 30px;
+                              }
 
-            .card-content {
-              padding: 20px;
-              text-align: left;
-            }
+                              .cta-button {
+                                background-color: #ff6f61;
+                                color: #fff;
+                                padding: 10px 20px;
+                                text-decoration: none;
+                                border-radius: 5px;
+                              }
 
-            .card-content h3 {
-              font-size: 1.5rem;
-              margin-bottom: 10px;
-            }
+                              .about-trek,
+                              .gallery,
+                              .contact {
+                                padding: 50px 20px;
+                                text-align: center;
+                              }
 
-            .card-content p {
-              font-size: 1rem;
-              color: #555;
-            }
+                              .gallery-images {
+                                display: flex;
+                                justify-content: space-around;
+                                flex-wrap: wrap;
+                              }
 
-            /* Trip Facts Section */
-            .trip-facts {
-              padding: 50px 20px;
-              text-align: center;
-              background-color: #fff;
-            }
+                              .gallery-images img {
+                                width: 30%;
+                                margin-bottom: 20px;
+                                border-radius: 10px;
+                              }
 
-            .trip-facts h2 {
-              font-size: 2.5rem;
-              margin-bottom: 40px;
-            }
+                              .contact form {
+                                max-width: 600px;
+                                margin: 0 auto;
+                                display: flex;
+                                flex-direction: column;
+                              }
 
-            .facts-container {
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-              gap: 20px;
-              max-width: 1200px;
-              margin: 0 auto;
-            }
+                              .contact form input,
+                              .contact form textarea {
+                                margin-bottom: 20px;
+                                padding: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 5px;
+                              }
 
-            .fact-card {
-              background-color: #f8f8f8;
-              border-radius: 10px;
-              padding: 20px;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-              text-align: center;
-            }
+                              .contact form button {
+                                background-color: #ff6f61;
+                                color: #fff;
+                                padding: 10px 20px;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                              }
 
-            .fact-card h3 {
-              font-size: 1.5rem;
-              margin-bottom: 10px;
-              color: #333;
-            }
+                              /* Itinerary Section */
+                              .itinerary {
+                                padding: 50px 20px;
+                                text-align: center;
+                                background-color: #f8f8f8;
+                              }
 
-            .fact-card p {
-              font-size: 1rem;
-              color: #555;
-            }
+                              .itinerary h2 {
+                                font-size: 2.5rem;
+                                margin-bottom: 40px;
+                              }
 
-            .fact-card i {
-              font-size: 2rem;
-              color: #ff6f61;
-              margin-bottom: 10px;
-            }
+                              .itinerary-cards {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 30px;
+                              }
 
-            /* FAQ Section */
-            .faq {
-              padding: 50px 20px;
-              text-align: center;
-              background-color: #f8f8f8;
-            }
+                              .card {
+                                background-color: #fff;
+                                border-radius: 10px;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                overflow: hidden;
+                              }
 
-            .faq h2 {
-              font-size: 2.5rem;
-              margin-bottom: 40px;
-            }
+                              .card-images {
+                                display: flex;
+                                justify-content: space-between;
+                                gap: 10px;
+                                padding: 10px;
+                              }
 
-            .faq-container {
-              max-width: 800px;
-              margin: 0 auto;
-            }
+                              .card-images img {
+                                width: 23%;
+                                height: 150px;
+                                object-fit: cover;
+                                border-radius: 5px;
+                              }
 
-            .faq-item {
-              border-bottom: 1px solid #ddd;
-              margin-bottom: 10px;
-            }
+                              .card-content {
+                                padding: 20px;
+                                text-align: left;
+                              }
 
-            .faq-question {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              padding: 15px;
-              cursor: pointer;
-            }
+                              .card-content h3 {
+                                font-size: 1.5rem;
+                                margin-bottom: 10px;
+                              }
 
-            .faq-question h3 {
-              font-size: 1.2rem;
-              margin: 0;
-              color: #333;
-            }
+                              .card-content p {
+                                font-size: 1rem;
+                                color: #555;
+                              }
 
-            .faq-question i {
-              font-size: 1.2rem;
-              color: #333;
-              transition: transform 0.3s ease;
-            }
+                              /* Trip Facts Section */
+                              .trip-facts {
+                                padding: 50px 20px;
+                                text-align: center;
+                                background-color: #fff;
+                              }
 
-            .faq-answer {
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.3s ease, padding 0.3s ease;
-            }
+                              .trip-facts h2 {
+                                font-size: 2.5rem;
+                                margin-bottom: 40px;
+                              }
 
-            .faq-answer p {
-              padding: 0 15px 15px;
-              margin: 0;
-              color: #555;
-            }
+                              .facts-container {
+                                display: grid;
+                                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                                gap: 20px;
+                                max-width: 1200px;
+                                margin: 0 auto;
+                              }
 
-            /* Active State */
-            .faq-item.active .faq-question i {
-              transform: rotate(180deg);
-            }
+                              .fact-card {
+                                background-color: #f8f8f8;
+                                border-radius: 10px;
+                                padding: 20px;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                text-align: center;
+                              }
 
-            .faq-item.active .faq-answer {
-              max-height: 200px; /* Adjust based on content */
-              padding-top: 10px;
-            }
+                              .fact-card h3 {
+                                font-size: 1.5rem;
+                                margin-bottom: 10px;
+                                color: #333;
+                              }
+
+                              .fact-card p {
+                                font-size: 1rem;
+                                color: #555;
+                              }
+
+                              .fact-card i {
+                                font-size: 2rem;
+                                color: #ff6f61;
+                                margin-bottom: 10px;
+                              }
+
+                              /* FAQ Section */
+                              .faq {
+                                padding: 50px 20px;
+                                text-align: center;
+                                background-color: #f8f8f8;
+                              }
+
+                              .faq h2 {
+                                font-size: 2.5rem;
+                                margin-bottom: 40px;
+                              }
+
+                              .faq-container {
+                                max-width: 800px;
+                                margin: 0 auto;
+                              }
+
+                              .faq-item {
+                                border-bottom: 1px solid #ddd;
+                                margin-bottom: 10px;
+                              }
+
+                              .faq-question {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 15px;
+                                cursor: pointer;
+                              }
+
+                              .faq-question h3 {
+                                font-size: 1.2rem;
+                                margin: 0;
+                                color: #333;
+                              }
+
+                              .faq-question i {
+                                font-size: 1.2rem;
+                                color: #333;
+                                transition: transform 0.3s ease;
+                              }
+
+                              .faq-answer {
+                                max-height: 0;
+                                overflow: hidden;
+                                transition: max-height 0.3s ease, padding 0.3s ease;
+                              }
+
+                              .faq-answer p {
+                                padding: 0 15px 15px;
+                                margin: 0;
+                                color: #555;
+                              }
+
+                              /* Active State */
+                              .faq-item.active .faq-question i {
+                                transform: rotate(180deg);
+                              }
+
+                              .faq-item.active .faq-answer {
+                                max-height: 200px; /* Adjust based on content */
+                                padding-top: 10px;
+                              }
 
 
-            .testimonials .testimonial-wrap {
-        padding-left: 50px;
+                              .testimonials .testimonial-wrap {
+                          padding-left: 50px;
+                        }
+
+                        .testimonials .testimonials-carousel,
+                        .testimonials .testimonials-slider {
+                          overflow: hidden;
+                        }
+
+                        .testimonials .testimonial-item {
+                          background-color: var(--surface-color);
+                          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+                          box-sizing: content-box;
+                          padding: 30px 30px 30px 60px;
+                          margin: 30px 15px;
+                          min-height: 200px;
+                          position: relative;
+                        }
+
+                        .testimonials .testimonial-item .testimonial-img {
+                          width: 90px;
+                          border-radius: 10px;
+                          border: 6px solid var(--background-color);
+                          position: absolute;
+                          left: -45px;
+                        }
+
+                        .testimonials .testimonial-item h3 {
+                          font-size: 18px;
+                          font-weight: bold;
+                          margin: 10px 0 5px 0;
+                        }
+
+                        .testimonials .testimonial-item h4 {
+                          color: color-mix(in srgb, var(--default-color), transparent 50%);
+                          font-size: 14px;
+                          margin: 0;
+                        }
+
+                        .testimonials .testimonial-item .stars {
+                          margin: 10px 0;
+                        }
+
+                        .testimonials .testimonial-item .stars i {
+                          color: #ffc107;
+                          margin: 0 1px;
+                        }
+
+                        .testimonials .testimonial-item .quote-icon-left,
+                        .testimonials .testimonial-item .quote-icon-right {
+                          color: color-mix(in srgb, var(--accent-color), transparent 60%);
+                          font-size: 26px;
+                          line-height: 0;
+                        }
+
+                        .testimonials .testimonial-item .quote-icon-left {
+                          display: inline-block;
+                          left: -5px;
+                          position: relative;
+                        }
+
+                        .testimonials .testimonial-item .quote-icon-right {
+                          display: inline-block;
+                          right: -5px;
+                          position: relative;
+                          top: 10px;
+                          transform: scale(-1, -1);
+                        }
+
+                        .testimonials .testimonial-item p {
+                          font-style: italic;
+                          margin: 15px auto 15px auto;
+                        }
+
+                        .testimonials .swiper-wrapper {
+                          height: auto;
+                        }
+
+                        .testimonials .swiper-pagination {
+                          margin-top: 20px;
+                          position: relative;
+                        }
+
+                        .testimonials .swiper-pagination .swiper-pagination-bullet {
+                          width: 12px;
+                          height: 12px;
+                          background-color: var(--background-color);
+                          opacity: 1;
+                          border: 1px solid var(--accent-color);
+                        }
+
+                        .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+                          background-color: var(--accent-color);
+                        }
+
+                        @media (max-width: 767px) {
+                          .testimonials .testimonial-wrap {
+                            padding-left: 0;
+                          }
+
+                          .testimonials .testimonials-carousel,
+                          .testimonials .testimonials-slider {
+                            overflow: hidden;
+                          }
+
+                          .testimonials .testimonial-item {
+                            padding: 30px;
+                            margin: 15px;
+                          }
+
+                          .testimonials .testimonial-item .testimonial-img {
+                            position: static;
+                            left: auto;
+                          }
+                          @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+                /* Fix z-index stacking and overflow issues */
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+      :root {
+        --primary-color: #ff6f61;
+        --secondary-color: #4a4a4a;
+        --accent-color: #3498db;
+        --background-color: #f8f9fa;
+        --text-color: #333;
       }
 
-      .testimonials .testimonials-carousel,
-      .testimonials .testimonials-slider {
+      body {
+        font-family: 'Open Sans', sans-serif;
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      .parallax-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
         overflow: hidden;
       }
 
-      .testimonials .testimonial-item {
-        background-color: var(--surface-color);
-        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-        box-sizing: content-box;
-        padding: 30px 30px 30px 60px;
-        margin: 30px 15px;
-        min-height: 200px;
-        position: relative;
-      }
-
-      .testimonials .testimonial-item .testimonial-img {
-        width: 90px;
-        border-radius: 10px;
-        border: 6px solid var(--background-color);
+      .scrollDist {
+        width: 100%;
+        height: 200%;
         position: absolute;
-        left: -45px;
+        top: 0;
+        left: 0;
       }
 
-      .testimonials .testimonial-item h3 {
-        font-size: 18px;
+      .parallax-main {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .parallax-main svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      #header {
+        position: fixed !important;
+        width: 100%;
+        z-index: 1000 !important;
+        background: rgba(255, 255, 255, 0.9);
+        transition: all 0.5s;
+        padding: 15px 0;
+      }
+
+      #header.header-scrolled,
+      #header.header-inner-pages {
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-title {
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
         font-weight: bold;
-        margin: 10px 0 5px 0;
-      }
-
-      .testimonials .testimonial-item h4 {
-        color: color-mix(in srgb, var(--default-color), transparent 50%);
-        font-size: 14px;
-        margin: 0;
-      }
-
-      .testimonials .testimonial-item .stars {
-        margin: 10px 0;
-      }
-
-      .testimonials .testimonial-item .stars i {
-        color: #ffc107;
-        margin: 0 1px;
-      }
-
-      .testimonials .testimonial-item .quote-icon-left,
-      .testimonials .testimonial-item .quote-icon-right {
-        color: color-mix(in srgb, var(--accent-color), transparent 60%);
-        font-size: 26px;
-        line-height: 0;
-      }
-
-      .testimonials .testimonial-item .quote-icon-left {
-        display: inline-block;
-        left: -5px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
         position: relative;
+        color: var(--secondary-color);
       }
 
-      .testimonials .testimonial-item .quote-icon-right {
-        display: inline-block;
-        right: -5px;
+      .section-title h2::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 120px;
+        height: 1px;
+        background: #ddd;
+        bottom: 1px;
+        left: calc(50% - 60px);
+      }
+
+      .section-title h2::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: var(--primary-color);
+        bottom: 0;
+        left: calc(50% - 20px);
+      }
+
+      .section-title p {
+        margin-bottom: 0;
+      }
+
+      .about-trek,
+      .trip-facts,
+      .timeline,
+      .itinerary,
+      .testimonials,
+      .gallery,
+      .faq,
+      .contact,
+      #footer {
+        padding: 60px 0;
+        overflow: hidden;
         position: relative;
-        top: 10px;
-        transform: scale(-1, -1);
+        z-index: 2;
+        background-color: #fff;
       }
 
-      .testimonials .testimonial-item p {
-        font-style: italic;
-        margin: 15px auto 15px auto;
+      #arrow-btn {
+        pointer-events: auto;
+        cursor: pointer;
       }
 
-      .testimonials .swiper-wrapper {
-        height: auto;
+      .parallax-text {
+        font-size: 500px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
       }
 
-      .testimonials .swiper-pagination {
-        margin-top: 20px;
-        position: relative;
-      }
-
-      .testimonials .swiper-pagination .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        background-color: var(--background-color);
-        opacity: 1;
-        border: 1px solid var(--accent-color);
-      }
-
-      .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-        background-color: var(--accent-color);
-      }
-
-      @media (max-width: 767px) {
-        .testimonials .testimonial-wrap {
-          padding-left: 0;
+      @media (max-width: 768px) {
+        .parallax-text {
+          font-size: 30px;
         }
+      }
 
-        .testimonials .testimonials-carousel,
-        .testimonials .testimonials-slider {
-          overflow: hidden;
+      @media (max-width: 480px) {
+        .parallax-text {
+          font-size: 20px;
         }
-
-        .testimonials .testimonial-item {
-          padding: 30px;
-          margin: 15px;
-        }
-
-        .testimonials .testimonial-item .testimonial-img {
-          position: static;
-          left: auto;
-        }
-            /* .container {
-              width: 80%;
-              margin: 0 auto;
-              padding: 20px;
-            }
-
-            .intro {
-              text-align: center;
-              margin-bottom: 40px;
-            }
-
-            .intro h1 {
-              font-size: 2.5em;
-              color: #333;
-            }
-
-            .intro p {
-              font-size: 1.2em;
-              color: #666;
-            }
-
-            .popular-tours,
-            .top-routes,
-            .online-booking,
-            .fabulous-location {
-              margin-bottom: 40px;
-            }
-
-            .popular-tours h2,
-            .top-routes h2,
-            .online-booking h2,
-            .fabulous-location h2 {
-              font-size: 2em;
-              color: #333;
-              margin-bottom: 20px;
-            }
-
-            .tour-list,
-            .route-list {
-              display: flex;
-              justify-content: space-between;
-            }
-
-            .tour-item,
-            .route-item {
-              background-color: #fff;
-              padding: 20px;
-              border-radius: 8px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-              width: 48%;
-            }
-
-            .tour-item h3,
-            .route-item p {
-              font-size: 1.2em;
-              color: #333;
-            }
-
-            .online-booking button {
-              background-color: #007bff;
-              color: #fff;
-              padding: 10px 20px;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-              font-size: 1em;
-            }
-
-            .online-booking button:hover {
-              background-color: #0056b3;
-            }
-
-            .fabulous-location p {
-              font-size: 1.2em;
-              color: #666;
-            } */
+      }
     </style>
   </head>
   <body>
@@ -485,7 +705,7 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="about.html">About</a></li>
+            <li><a href="../about.html">About</a></li>
             <li class="dropdown">
               <a href="#"
                 ><span>Activities</span>
@@ -497,15 +717,14 @@
                     >Cyclothon</a
                   >
                 </li>
-                <li><a href="arts-culture.html">Arts & Culture</a></li>
+                <li><a href="../arts-culture.html">Arts & Culture</a></li>
                 <li class="dropdown">
                   <a href="arts-culture.html"
                     ><span>Trekking</span>
                     <i class="bi bi-chevron-down toggle-dropdown"></i
                   ></a>
                   <ul>
-                    <li><a href="./Trekking/ABC-2023.html">ABC 2023</a></li>
-                    <li><a href="#">EBC 2024</a></li>
+                    <li><a href="../Trekking/EBC-2024.html">EBC 2024</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
@@ -514,8 +733,21 @@
                     <i class="bi bi-chevron-down toggle-dropdown"></i
                   ></a>
                   <ul>
-                    <li><a href="#">Everest Summit 2.0</a></li>
-                    <li><a href="#">Event Schedule</a></li>
+                    <li>
+                      <a href="../Everest-Summit/everest-summit-2.0.html"
+                        >Everest Summit 2.0</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Everest-Summit/everest-summit.html"
+                        >Everest Summit</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../Everest-Summit/event-schedule.html"
+                        >Event Schedule</a
+                      >
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -533,7 +765,7 @@
                 </li>
               </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -542,13 +774,108 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Trekking to ABC</h1>
-        <p>Join us on an unforgettable journey to the Annapurna Base Camp.</p>
-        <a href="#" class="cta-button">Join the Trek</a>
-      </div>
-    </section>
+    <div class="parallax-container">
+      <div class="scrollDist"></div>
+      <main class="parallax-main">
+        <svg
+          viewBox="0 0 1200 800"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice"
+        >
+          <mask id="m">
+            <g class="cloud1">
+              <rect fill="#fff" width="100%" height="801" y="799" />
+              <image
+                xlink:href="https://assets.codepen.io/721952/cloud1Mask.jpg"
+                width="1200"
+                height="800"
+              />
+            </g>
+          </mask>
+
+          <image
+            class="sky"
+            xlink:href="https://assets.codepen.io/721952/sky.jpg"
+            width="1200"
+            height="590"
+          />
+          <image
+            class="mountBg"
+            xlink:href="https://assets.codepen.io/721952/mountBg.png"
+            width="1200"
+            height="800"
+          />
+
+          <image
+            class="mountMg"
+            xlink:href="https://assets.codepen.io/721952/mountMg.png"
+            width="1200"
+            height="800"
+          />
+          <image
+            class="cloud2"
+            xlink:href="https://assets.codepen.io/721952/cloud2.png"
+            width="1200"
+            height="800"
+          />
+          <image
+            class="mountFg"
+            xlink:href="https://assets.codepen.io/721952/mountFg.png"
+            width="1200"
+            height="800"
+          />
+          <image
+            class="cloud1"
+            xlink:href="https://assets.codepen.io/721952/cloud1.png"
+            width="1200"
+            height="800"
+          />
+          <image
+            class="cloud3"
+            xlink:href="https://assets.codepen.io/721952/cloud3.png"
+            width="1200"
+            height="800"
+          />
+          <text
+            fill="#fff"
+            x="50%"
+            y="25%"
+            text-anchor="middle"
+            class="parallax-text"
+          >
+            Embark on a Transformative Trek to ABC
+          </text>
+          <polyline
+            class="arrow"
+            fill="#fff"
+            points="599,250 599,289 590,279 590,282 600,292 610,282 610,279 601,289 601,250"
+          />
+
+          <g mask="url(#m)">
+            <rect fill="#fff" width="100%" height="100%" />
+            <text
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              fill="#162a43"
+              class="parallax-text"
+            >
+
+            </text>
+          </g>
+
+          <rect
+            id="arrow-btn"
+            width="100"
+            height="100"
+            opacity="0"
+            x="550"
+            y="220"
+            style="cursor: pointer"
+          />
+        </svg>
+      </main>
+    </div>
 
     <section class="about-trek">
       <h2>About the Trek</h2>
@@ -621,6 +948,61 @@
           <i class="fa-solid fa-mountain-city"></i>
           <h3>Region of Nepal</h3>
           <p>Annapurna Region, Kaski</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Expedition Timeline</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content">
+              <h3>Selection Process</h3>
+              <p>
+                Rigorous selection of participants based on physical fitness and
+                mountaineering experience
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-content">
+              <h3>Training Camp</h3>
+              <p>
+                Intensive 6-month training program including high-altitude
+                acclimatization
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content">
+              <h3>Arrival in Nepal</h3>
+              <p>
+                Team assembles in Kathmandu for final preparations and cultural
+                immersion
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-content">
+              <h3>Base Camp Establishment</h3>
+              <p>Setting up Everest Base Camp and acclimatization period</p>
+            </div>
+          </div>
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-content">
+              <h3>Summit Attempt</h3>
+              <p>Final push to the summit of Mount Everest</p>
+            </div>
+          </div>
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-content">
+              <h3>Return and Celebration</h3>
+              <p>Safe return to Base Camp and celebration of the achievement</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1156,12 +1538,74 @@
   </div> -->
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Initialize parallax animation
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".scrollDist",
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 1,
+            },
+          })
+          .fromTo(".sky", { y: 0 }, { y: -200 }, 0)
+          .fromTo(".cloud1", { y: 100 }, { y: -800 }, 0)
+          .fromTo(".cloud2", { y: -150 }, { y: -500 }, 0)
+          .fromTo(".cloud3", { y: -50 }, { y: -650 }, 0)
+          .fromTo(".mountBg", { y: -10 }, { y: -100 }, 0)
+          .fromTo(".mountMg", { y: -30 }, { y: -250 }, 0)
+          .fromTo(".mountFg", { y: -50 }, { y: -600 }, 0);
+
+        // Arrow button interactions
+        const arrowBtn = document.querySelector("#arrow-btn");
+
+        arrowBtn.addEventListener("mouseenter", () => {
+          gsap.to(".arrow", {
+            y: 10,
+            duration: 0.8,
+            ease: "back.inOut(3)",
+            overwrite: "auto",
+          });
+        });
+
+        arrowBtn.addEventListener("mouseleave", () => {
+          gsap.to(".arrow", {
+            y: 0,
+            duration: 0.5,
+            ease: "power3.out",
+            overwrite: "auto",
+          });
+        });
+
+        arrowBtn.addEventListener("click", () => {
+          gsap.to(window, {
+            scrollTo: {
+              y: window.innerHeight,
+              autoKill: false,
+            },
+            duration: 1.5,
+            ease: "power1.inOut",
+          });
+        });
+      });
+    </script>
+    <script>
       // FAQ Toggle Functionality
       document.querySelectorAll(".faq-question").forEach((question) => {
         question.addEventListener("click", () => {
           const faqItem = question.parentElement;
           faqItem.classList.toggle("active");
         });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
       });
     </script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
